@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>BlackNoel</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<style>
+    body{
+        background-color: black;
+    }
+
+    :root {
+    /*EDIÇÃO DAS CORES*/
+    /*COR FUNDO*/
+    --overlaycolorbackground: #0e0d16;
+
+    /*COR DA BARRA DO TIMMER*/
+    /*Cor da Direita*/
+    --colorbar1: #fe0400;
+    /*Cor da Esquerda*/
+    --colorbar2: #fe7500;
+    }
+
+    .imgtopmargin{
+        margin-top: -13px;
+    }
+
+    .Roleta{
+        background-color: var(--overlaycolorbackground);
+    }
+
+    .iconess{
+        position: relative ;
+        z-index: 2000;
+    }
+
+    
+    .allRankBits{
+        width: 100%;
+        
+    }
+    .progress2 {
+  padding: 0px;
+  border-radius: 30px;
+  
+}
+
+.progress-bar2 {
+position: relative ;
+z-index: 2000;
+  height: 5px;
+  border-radius: 30px;
+  transition: 0.4s ease-in-out;  
+  transition-property: width, linear-gradient(90deg, var(--colorbar1),var(--colorbar2));   
+}
+
+.progress-moved .progress-bar2 {
+    
+  width: 100%; 
+  background: linear-gradient(90deg, var(--colorbar1),var(--colorbar2));
+  animation: progressAnimation 60s;
+  animation-iteration-count: infinite;
+}
+
+.container {
+  margin: 100px auto;
+  width: 425px;
+  text-align: center;
+}
+
+@keyframes progressAnimationStrike {
+     from { width: 0 }
+     to   { width: 100% }
+}
+
+@keyframes progressAnimation {
+  0%   { width: 1%; background: linear-gradient(90deg, var(--colorbar1) 0%,var(--colorbar2) 100%); }
+  100% { background: linear-gradient(90deg, var(--colorbar1) 0%,var(--colorbar2) 100%); }
+}
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 55px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+
+
+</style>
+</head>
+
+
+<body id="idSuaDiv">
+    <div class="Roleta">
+        <div class="ItemContent">
+            <div class="Categoria1" id="Categoria1" style="display: none;">
+                <!--LINK STREAMELEMENTS META SUBS-->
+                <iframe  src="https://streamelements.com/overlay/650b59330e597cd007f8a338/OM025QXJrnGpNszZXV2_YGJLIiXpi6OYztmyCAq6UQ6LJZ8G" scrolling="off" frameborder ="0" style="margin-left: -108px; margin-top: -3px; z-index: 1;" width="500"></iframe>
+                <div class="container" style="margin-left: -105px; margin-top: -112px; top:-2em;">    
+                    <div class="progress2 progress-moved">
+                      <div class="progress-bar2" >
+                      </div>                       
+                    </div> 
+                  </div>
+                <div class="AbismoAtual">
+                </div>
+            </div>
+            <div class="Categoria2" id="Categoria2" style="display: none;">
+                <!--LINK STREAMELEMENTS ULTIMO SUB-->
+                <iframe  src="https://streamelements.com/overlay/650b527ffab33ece9205f960/OM025QXJrnGpNszZXV2_YGJLIiXpi6OYztmyCAq6UQ6LJZ8G" scrolling="off" frameborder ="0" ></iframe>
+                <div class="container" style="margin-left: -105px; margin-top: -115px;">    
+                    <div class="progress2 progress-moved">
+                      <div class="progress-bar2" >
+                      </div>                       
+                    </div> 
+                  </div>
+            </div>
+            <div class="Categoria3" id="Categoria2" style="display: none;">
+                <!--Container TOP GIFT-->
+                <iframe  src="https://streamelements.com/overlay/650b55ffb6dd470bf2008ab5/OM025QXJrnGpNszZXV2_YGJLIiXpi6OYztmyCAq6UQ6LJZ8G" scrolling="off" frameborder ="0"></iframe>
+                <div class="container" style="margin-left: -105px; margin-top: -115px;">    
+                    <div class="progress2 progress-moved">
+                      <div class="progress-bar2" >
+                      </div>                       
+                    </div> 
+                  </div>
+            </div>
+
+            <div class="Categoria4" id="Categoria2" style="display: block;">
+                <!-----------ULTIMOS BITS------------->
+                <iframe  src="https://streamelements.com/overlay/650b54efb6dd4798d6008329/OM025QXJrnGpNszZXV2_YGJLIiXpi6OYztmyCAq6UQ6LJZ8G" scrolling="off" frameborder ="0"></iframe>
+                <div class="container" style="margin-left: -105px; margin-top: -115px;">    
+                    <div class="progress2 progress-moved">
+                      <div class="progress-bar2" >
+                      </div>                       
+                    </div> 
+                  </div>
+        
+    </div>
+
+
+    </div>          
+</div>
+
+        <div class="ItemIcon">
+        <!--ICONES LATERAIS-->
+            <br/>
+            <div class="Categoria-1 iconess" style="display: block; margin-top: -65px;">
+                <!--META DE BITS NAO TEM ESPAÇO PARA ICONE-->
+            </div>
+
+            <div class="Categoria-2 iconess" style="display: block;">
+                <!--ICONE ULTIMO SUB-->
+                <img src="icon.png" width="65" height="65" class="imgtopmargin">
+            </div>
+
+            <div class="Categoria-3 iconess" style="display: block;">
+                <!--ICONE TOP GIFT-->
+                <img src="icon.png" width="65" height="65" class="imgtopmargin">
+            </div>
+
+            <div class="Categoria-4 iconess" style="display: block;" >
+                <!--ICONE ULTIMOS BITS-->
+                <img src="icon.png" width="65" height="65" class="imgtopmargin">
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    <br/><br/><br/><br/>
+    <button id="NextSlide1" onclick="NextSlide()" style="display: none;">Next Slide</button>
+    <button id="NextSlide1Rank" onclick="NextSlideRank()" style="display: none;">Next Slide</button>
+
+    <script language='javascript' type="text/jscript">      
+        var SliderStart = false;
+        var SlideRank = document.querySelector('.rootRoletta')
+
+        var container1 = document.querySelector('.Categoria1');
+        var container01 = document.querySelector('.Categoria-1');
+
+        var container2 = document.querySelector('.Categoria2');
+        var container02 = document.querySelector('.Categoria-2');
+
+        var container3 = document.querySelector('.Categoria3');
+        var container03 = document.querySelector('.Categoria-3');
+
+        var container4 = document.querySelector('.Categoria4');
+        var container04 = document.querySelector('.Categoria-4');
+        
+        container4.style.display = "none";
+        container04.style.display = "none";
+
+        container3.style.display = "none";
+        container03.style.display = "none";
+
+        container2.style.display = "none";
+        container02.style.display = "none";
+
+        container1.style.display = "block";
+        container01.style.display = "block";
+
+        var currentslide = 0
+
+        
+        setInterval(function(){ document.querySelector('#NextSlide1').click();}, 5000);
+        var Slidecurrent = 0;
+
+        function NextSlide() {
+            if(Slidecurrent === 0){
+                container01.style.animation = "fadeOut 1s";
+                container1.style.animation = "fadeOut 1s";
+
+                setTimeout(function(){ 
+                container1.style.display = "none";
+                container01.style.display = "none";
+                }, 800);
+
+                setTimeout(function(){ 
+                container2.style.display = "block";
+                container02.style.display = "block";
+                container02.style.animation = "fadeIn 1s";
+                container2.style.animation = "fadeIn 1s";
+                }, 800);
+                
+                Slidecurrent = 1;
+            }else if(Slidecurrent === 1){          
+                container02.style.animation = "fadeOut 1s";
+                container2.style.animation = "fadeOut 1s";
+
+                setTimeout(function(){ 
+                container2.style.display = "none";
+                container02.style.display = "none";
+                }, 800);
+
+                setTimeout(function(){ 
+                container3.style.display = "block";
+                container03.style.display = "block";
+                container03.style.animation = "fadeIn 1s";
+                container3.style.animation = "fadeIn 1s";
+                }, 800);
+
+                Slidecurrent = 2;
+            }else if(Slidecurrent === 2){
+                container03.style.animation = "fadeOut 1s";
+                container3.style.animation = "fadeOut 1s";
+
+                setTimeout(function(){ 
+                container3.style.display = "none";
+                container03.style.display = "none";
+                }, 800);
+
+                setTimeout(function(){ 
+                container4.style.display = "block";
+                container04.style.display = "block";
+                container04.style.animation = "fadeIn 1s";
+                container4.style.animation = "fadeIn 1s";
+                SliderStart = true;
+                }, 800);
+
+                Slidecurrent = 3;
+            }else{
+              console.log("Passou Aqui");
+              container04.style.animation = "fadeOut 1s";
+              container4.style.animation = "fadeOut 1s";
+
+              setTimeout(function(){ 
+                container4.style.display = "none";
+                container04.style.display = "none";
+                Rank1Slide.style.marginLeft  = "0px";
+                Rank003img.style.backgroundColor = "#1d1c2a";
+                Rank001img.style.backgroundColor = "#405cfa";
+                }, 800);
+
+                setTimeout(function(){ 
+                container1.style.display = "block";
+                container01.style.display = "block";
+                container01.style.animation = "fadeIn 1s";
+                container1.style.animation = "fadeIn 1s";
+                SliderStart = false;
+                }, 800);
+
+                Slidecurrent = 0;
+            }
+        }
+
+        var SlideRank = document.querySelector('.rootRoletta');
+        setInterval(function(){ document.querySelector('#NextSlide1Rank').click();}, 20000);
+        var currentRank = 0;
+
+        var Rank001img = document.querySelector('.slide001');
+        var Rank002img = document.querySelector('.slide002');
+        var Rank003img = document.querySelector('.slide003');
+
+        var Rank1Slide = document.querySelector('.Top1All');
+        function NextSlideRank() {
+            if(currentRank===0 && SliderStart ===true){
+                Rank1Slide.style.animation  = "Rank1ParaRank2 1s";
+                Rank001img.style.animation = "SlideDesativado 1s";
+                Rank002img.style.animation = "SlideAtivoRank 1s";
+                
+                    setTimeout(function(){ 
+                        Rank1Slide.style.marginLeft  = "-426px";
+                        Rank001img.style.backgroundColor = "#1d1c2a";
+                        Rank002img.style.backgroundColor = "#405cfa";
+                    }, 995);
+                currentRank++;
+            }else if(currentRank===1 && SliderStart ===true){
+                Rank1Slide.style.animation  = "Rank2ParaRank3 1s";
+                Rank002img.style.animation = "SlideDesativado 1s";
+                Rank003img.style.animation = "SlideAtivoRank 1s";
+                    setTimeout(function(){ 
+                        Rank1Slide.style.marginLeft  = "-852px";
+                        Rank002img.style.backgroundColor = "#1d1c2a";
+                        Rank003img.style.backgroundColor = "#405cfa";
+                    }, 995);
+                currentRank++;
+            }else if(currentRank===2 && SliderStart ===true){
+                setTimeout(function(){ 
+                    Rank1Slide.style.marginLeft  = "0px";
+                    Rank003img.style.backgroundColor = "#1d1c2a";
+                    Rank001img.style.backgroundColor = "#405cfa";
+                    currentRank= 0;
+                }, 1200);
+            }
+        }
+        </script>
+</body>
+</html>
