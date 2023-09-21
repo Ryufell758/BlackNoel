@@ -9,9 +9,6 @@
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <style>
-    body{
-        background-color: black;
-    }
 
     :root {
     /*EDIÇÃO DAS CORES*/
@@ -20,7 +17,7 @@
 
     /*COR DA BARRA DO TIMMER*/
     /*Cor da Direita*/
-    --colorbar1: #fe0400;
+    --colorbar1: #eb4d5c;
     /*Cor da Esquerda*/
     --colorbar2: #fe7500;
     }
@@ -147,9 +144,21 @@ z-index: 2000;
                       <div class="progress-bar2" >
                       </div>                       
                     </div> 
+                </div>
+            </div>
+
+            <div class="Categoria5" id="Categoria5" style="display: none;">
+                <!--LINK STREAMELEMENTS META BITS-->
+                <iframe  src="https://streamelements.com/overlay/650b579120b2f81f8466601b/OM025QXJrnGpNszZXV2_YGJLIiXpi6OYztmyCAq6UQ6LJZ8G" scrolling="off" frameborder ="0" style="margin-left: -108px; margin-top: -3px; z-index: 1;" width="500"></iframe>
+                <div class="container" style="margin-left: -105px; margin-top: -112px; top:-2em;">    
+                    <div class="progress2 progress-moved">
+                      <div class="progress-bar2" >
+                      </div>                       
+                    </div> 
                   </div>
-        
-    </div>
+                <div class="AbismoAtual">
+                </div>
+            </div>
 
 
     </div>          
@@ -164,17 +173,22 @@ z-index: 2000;
 
             <div class="Categoria-2 iconess" style="display: block;">
                 <!--ICONE ULTIMO SUB-->
-                <img src="icon.png" width="65" height="65" class="imgtopmargin">
+                <img src="gift.gif" width="105" height="75" class="imgtopmargin" style="margin-left: -20px;">
             </div>
 
             <div class="Categoria-3 iconess" style="display: block;">
                 <!--ICONE TOP GIFT-->
-                <img src="icon.png" width="65" height="65" class="imgtopmargin">
+                <img src="gift.gif" width="105" height="75" class="imgtopmargin" style="margin-left: -20px;">
             </div>
 
             <div class="Categoria-4 iconess" style="display: block;" >
                 <!--ICONE ULTIMOS BITS-->
-                <img src="icon.png" width="65" height="65" class="imgtopmargin">
+                <img src="bits.gif" width="65" height="65" class="imgtopmargin">
+            </div>
+
+            <div class="Categoria-5 iconess" style="display: block; margin-top: -65px;">
+                <!--META DE BITS NAO TEM ESPAÇO PARA ICONE-->
+                5
             </div>
         </div>
     </div>
@@ -201,7 +215,13 @@ z-index: 2000;
 
         var container4 = document.querySelector('.Categoria4');
         var container04 = document.querySelector('.Categoria-4');
+
+        var container5 = document.querySelector('.Categoria5');
+        var container05 = document.querySelector('.Categoria-5');
         
+        container5.style.display = "none";
+        container05.style.display = "none";
+
         container4.style.display = "none";
         container04.style.display = "none";
 
@@ -214,10 +234,10 @@ z-index: 2000;
         container1.style.display = "block";
         container01.style.display = "block";
 
-        var currentslide = 0
+        var currentslide = 0;
 
         
-        setInterval(function(){ document.querySelector('#NextSlide1').click();}, 5000);
+        setInterval(function(){ document.querySelector('#NextSlide1').click();}, 60000);
         var Slidecurrent = 0;
 
         function NextSlide() {
@@ -273,17 +293,30 @@ z-index: 2000;
                 }, 800);
 
                 Slidecurrent = 3;
-            }else{
-              console.log("Passou Aqui");
+            }else if(Slidecurrent === 3){
               container04.style.animation = "fadeOut 1s";
               container4.style.animation = "fadeOut 1s";
 
               setTimeout(function(){ 
                 container4.style.display = "none";
                 container04.style.display = "none";
-                Rank1Slide.style.marginLeft  = "0px";
-                Rank003img.style.backgroundColor = "#1d1c2a";
-                Rank001img.style.backgroundColor = "#405cfa";
+                }, 800);
+
+                setTimeout(function(){ 
+                container5.style.display = "block";
+                container05.style.display = "block";
+                container05.style.animation = "fadeIn 1s";
+                container5.style.animation = "fadeIn 1s";
+                }, 800);
+
+                Slidecurrent = 4;
+            }else{
+                container05.style.animation = "fadeOut 1s";
+                container5.style.animation = "fadeOut 1s";
+
+                setTimeout(function(){ 
+                container5.style.display = "none";
+                container05.style.display = "none";
                 }, 800);
 
                 setTimeout(function(){ 
@@ -291,53 +324,13 @@ z-index: 2000;
                 container01.style.display = "block";
                 container01.style.animation = "fadeIn 1s";
                 container1.style.animation = "fadeIn 1s";
-                SliderStart = false;
                 }, 800);
 
                 Slidecurrent = 0;
             }
         }
 
-        var SlideRank = document.querySelector('.rootRoletta');
-        setInterval(function(){ document.querySelector('#NextSlide1Rank').click();}, 20000);
-        var currentRank = 0;
-
-        var Rank001img = document.querySelector('.slide001');
-        var Rank002img = document.querySelector('.slide002');
-        var Rank003img = document.querySelector('.slide003');
-
-        var Rank1Slide = document.querySelector('.Top1All');
-        function NextSlideRank() {
-            if(currentRank===0 && SliderStart ===true){
-                Rank1Slide.style.animation  = "Rank1ParaRank2 1s";
-                Rank001img.style.animation = "SlideDesativado 1s";
-                Rank002img.style.animation = "SlideAtivoRank 1s";
-                
-                    setTimeout(function(){ 
-                        Rank1Slide.style.marginLeft  = "-426px";
-                        Rank001img.style.backgroundColor = "#1d1c2a";
-                        Rank002img.style.backgroundColor = "#405cfa";
-                    }, 995);
-                currentRank++;
-            }else if(currentRank===1 && SliderStart ===true){
-                Rank1Slide.style.animation  = "Rank2ParaRank3 1s";
-                Rank002img.style.animation = "SlideDesativado 1s";
-                Rank003img.style.animation = "SlideAtivoRank 1s";
-                    setTimeout(function(){ 
-                        Rank1Slide.style.marginLeft  = "-852px";
-                        Rank002img.style.backgroundColor = "#1d1c2a";
-                        Rank003img.style.backgroundColor = "#405cfa";
-                    }, 995);
-                currentRank++;
-            }else if(currentRank===2 && SliderStart ===true){
-                setTimeout(function(){ 
-                    Rank1Slide.style.marginLeft  = "0px";
-                    Rank003img.style.backgroundColor = "#1d1c2a";
-                    Rank001img.style.backgroundColor = "#405cfa";
-                    currentRank= 0;
-                }, 1200);
-            }
-        }
+        
         </script>
 </body>
 </html>
